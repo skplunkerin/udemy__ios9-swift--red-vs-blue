@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var spartanBlueBg: UIImageView!
+    @IBOutlet weak var spartanRedBg: UIImageView!
+    @IBOutlet weak var hideRedButton: UIButton!
+    @IBOutlet weak var hideBlueButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +23,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func hideRedShowBlue(sender: AnyObject) {
+        spartanRedBg.hidden = true
+        spartanBlueBg.hidden = false
+    }
+    
+    @IBAction func hideBlueShowRed(sender: AnyObject) {
+        spartanBlueBg.hidden = true
+        spartanRedBg.hidden = false
+    }
 
 }
 
